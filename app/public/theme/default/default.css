@@ -35,3 +35,8 @@ footer{
     height:50px;
     background-color:#ddd;
 }
+
+/*已接入项目列表*/
+.applist-wrap{
+    padding:50px;
+}

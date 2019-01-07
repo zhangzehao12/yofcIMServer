@@ -19,4 +19,7 @@ module.exports = app => {
   // 登录
   router.post('/passport/local', localStrategy);
 
+  // 已接入的应用列表页面
+  router.get('/applist', controller.applist.index);
+
 };

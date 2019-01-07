@@ -10,18 +10,9 @@ class HomeController extends Controller {
       var userName = ctx.user.userName;
     }
 
-    if (ctx.isAuthenticated()) {
-      await ctx.render('home', {
-        userName
-      });
-    } else {
-      // redirect to origin url by ctx.session.returnTo
-      ctx.session.returnTo = ctx.path;
-      // 未登录跳转去登录页面
-      await this.ctx.render('signIn', {
-        userName
-      });
-    }
+    await ctx.render('home', {
+      userName
+    });
   }
 
   // 输出注册页面
