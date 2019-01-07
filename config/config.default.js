@@ -33,7 +33,6 @@ module.exports = appInfo => {
 
   // 配置session
   config.session = {
-    // maxAge: 5000,
     key: 'YOFC_IM_SESSION_ID',
     httpOnly: true,
     encrypt: true,

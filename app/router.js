@@ -7,10 +7,11 @@ module.exports = app => {
   const { router, controller } = app;
   router.get('/', controller.home.render);
   router.get('/signIn', controller.home.signIn);
+  router.get('/logOut', controller.home.logout);
 
   // router.get('/register', controller.home.reg);
 
-  router.post('/doRegister', controller.home.doReg);
+  // router.post('/doRegister', controller.home.doReg);
 
   const localStrategy = app.passport.authenticate('local', {
     successRedirect: '/'

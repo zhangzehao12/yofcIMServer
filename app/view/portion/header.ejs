@@ -36,7 +36,13 @@
                 </ul>
 
                 <span class="navbar-text">
+
+                    <% if(userName) { %>
+                    <span style="color:#fff;">
+                        <%=userName %>,</span><a href="/logOut" style="color:#fff;">退出</a>
+                    <% } else {%>
                     <a href="/signIn" style="color:#fff;">登录/注册</a>
+                    <% } %>
                 </span>
             </div>
         </nav>
