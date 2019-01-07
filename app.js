@@ -1,0 +1,28 @@
+
+
+module.exports = app => {
+    app.passport.verify(async (ctx, user) => {
+        // console.log(user);
+        // return user;
+        const existsAdmin = await ctx.service.admin.getAdminByLogin(user.username,
+            user.password);
+
+        // console.log(existsAdmin);
+        //查到了登录admin信息
+        if (existsAdmin) {
+            ctx.session.userName = existsAdmin.userName;
+        }
+        return existsAdmin;
+    });
+
+    //将用户信息序列化后存进session里面，一般要精简,只保存个别字段
+    // app.passport.serializeUser(async (ctx, user) => {
+    //     console.log('======')
+    //     console.log(user)
+    // });
+
+    //反序列化后把用户信息从session里面取出来，反查数据库拿到完整信息
+    // app.passport.deserializeUser(async (ctx, user) => {
+
+    // });
+}

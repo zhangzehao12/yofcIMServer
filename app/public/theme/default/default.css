@@ -1,0 +1,37 @@
+html,body{
+    height:100%;
+}
+#navbarNav ul li a{
+    color:#fff;
+}
+
+/*登录表单*/
+#loginForm{
+    width:550px;
+    height:300px;
+    margin:0 auto;
+    background-color:#fff;
+    border:1px solid #ccc;
+    padding:20px;
+    border-radius:4px;
+}
+
+/*注册表单*/
+#regForm{
+    width:550px;
+    height:auto;
+    margin:0 auto;
+    background-color:#fff;
+    border:1px solid #ccc;
+    padding:20px;
+    border-radius:4px;
+}
+/*页面主体内容区域*/
+/* .main-container{
+    height:calc(100% - 105.9722px);
+} */
+/*网站页脚*/
+footer{
+    height:50px;
+    background-color:#ddd;
+}
