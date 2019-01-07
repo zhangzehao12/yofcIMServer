@@ -49,6 +49,7 @@ class HomeController extends Controller {
   async logout() {
     const ctx = this.ctx;
     ctx.logout();
+    // console.log('referer:', ctx.get('referer')) // http://localhost:7001/
     ctx.redirect(ctx.get('referer') || '/');
   }
 }
