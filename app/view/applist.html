@@ -1,5 +1,6 @@
 <%-include('portion/header'); %>
 <div class="applist-wrap">
+    <% for (var i=0;i<listData.length;i++) {%>
     <div class="card">
         <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg"
             preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap">
@@ -8,11 +9,16 @@
                 cap</text>
         </svg>
         <div class="card-body">
-            <h5 class="card-title">警务通</h5>
-            <p class="card-text">警务通警务通警务通警务通</p>
+            <h5 class="card-title">
+                <%=listData[i].projectName %>
+            </h5>
+            <p class="card-text">
+                <%=listData[i].describe %>
+            </p>
             <a href="#" class="btn btn-primary">管理应用</a>
         </div>
     </div>
+    <%}%>
 
     <div class="card" style="text-align:center;">
         <i class="fas fa-folder-plus" style="font-size:10rem;line-height:22rem;color:#ccc;"></i>
@@ -57,7 +63,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
-                <button type="button" class="btn btn-primary">确定</button>
+                <button type="button" class="btn btn-primary" id="doCreateBtn">确定</button>
             </div>
         </div>
     </div>
@@ -66,7 +72,28 @@
     $(document).ready(function () {
         $('#createBtn').on('click', function () {
             $('#createModal').modal()
-        })
+        });
+
+        //发起新建应用请求
+        $('#doCreateBtn').on('click', function () {
+            axios.post('/api/create_app?_csrf=<%=csrf%>', {
+                projectName: $.trim($('#projectName').val()),
+                describe: $.trim($('#projectDescribe').val())
+            })
+                .then(function (response) {
+                    //弹出toast提示
+                    $.toast({
+                        // heading: 'Positioning',
+                        text: '新增项目成功！',
+                        position: 'top-center',
+                        // stack: false
+                    });
+                    $('#createModal').modal('hide');
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        });
     });
 </script>
 <%-include('portion/footer'); %>

@@ -14,6 +14,15 @@ class ProjectService extends Service {
             where: { ...filter },
         });
     };
+
+    /**
+     * 新增项目
+     * @param {object} 待插入记录字段
+     * @return {object|null}-插入结果
+     */
+    async createProject(params) {
+        return await this.app.model.Project.create(params);
+    }
 }
 
 module.exports = ProjectService;

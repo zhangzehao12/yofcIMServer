@@ -22,4 +22,7 @@ module.exports = app => {
   // 已接入的应用列表页面
   router.get('/applist', controller.applist.index);
 
+  // 新建一个应用
+  router.post('/api/create_app', controller.applist.create)
+
 };
