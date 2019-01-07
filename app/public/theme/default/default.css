@@ -39,4 +39,12 @@ footer{
 /*已接入项目列表*/
 .applist-wrap{
     padding:50px;
+    overflow:hidden;
+}
+
+.applist-wrap .card{
+    float: left;
+    width:18rem;
+    height:22rem;
+    margin:0 0.5rem;
 }

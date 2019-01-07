@@ -5,6 +5,13 @@ const Controller = require('egg').Controller;
 class ApplistController extends Controller {
     async index() {
         const ctx = this.ctx;
+        //项目列表数据
+        const projectList = await ctx.service.project.getAllProjects({
+            attributes: ['projectId', 'projectName', 'describe']
+        });
+
+        console.log(projectList);
+
         if (ctx.user) {
             var userName = ctx.user.userName;
         }
