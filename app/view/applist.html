@@ -89,6 +89,8 @@
                         // stack: false
                     });
                     $('#createModal').modal('hide');
+                    //重载一下页面
+                    window.location.href = '/applist';
                 })
                 .catch(function (error) {
                     console.log(error);
