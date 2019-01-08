@@ -46,13 +46,13 @@
                     <fieldset style="border:1px solid #ccc;padding:20px;">
                         <legend style="font-size:12px;display:inline-block;width:auto;">对接网易云信</legend>
                         <div class="form-group">
-                            <label for="appKey" class="col-form-label">App Key</label>
-                            <input type="text" class="form-control" id="appKey">
+                            <label for="yxAppKey" class="col-form-label">App Key</label>
+                            <input type="text" class="form-control" id="yxAppKey">
                         </div>
 
                         <div class="form-group">
-                            <label for="appSecret" class="col-form-label">App Secret</label>
-                            <input type="text" class="form-control" id="appSecret">
+                            <label for="yxAppSecret" class="col-form-label">App Secret</label>
+                            <input type="text" class="form-control" id="yxAppSecret">
                         </div>
                     </fieldset>
                     <div class="form-group">
@@ -78,7 +78,9 @@
         $('#doCreateBtn').on('click', function () {
             axios.post('/api/create_app?_csrf=<%=csrf%>', {
                 projectName: $.trim($('#projectName').val()),
-                describe: $.trim($('#projectDescribe').val())
+                describe: $.trim($('#projectDescribe').val()),
+                yxAppKey: $.trim($('#yxAppKey').val()),
+                yxAppSecret: $.trim($('#yxAppSecret').val())
             })
                 .then(function (response) {
                     //弹出toast提示

@@ -10,7 +10,7 @@ class ApplistController extends Controller {
         const listData = [];
         //项目列表数据
         const projectList = await ctx.service.project.getAllProjects({
-            attributes: ['projectId', 'projectName', 'describe']
+            attributes: ['projectId', 'projectName', 'describe', 'updated_at']
         });
 
         // console.log(projectList);
@@ -18,7 +18,8 @@ class ApplistController extends Controller {
             let temp = {
                 projectName: projectList[i].projectName,
                 projectId: projectList[i].projectId,
-                describe: projectList[i].describe
+                describe: projectList[i].describe,
+                updated_at: projectList[i].updated_at
             }
             listData.push(temp);
         }
@@ -26,7 +27,7 @@ class ApplistController extends Controller {
         if (ctx.user) {
             var userName = ctx.user.userName;
         }
-        // console.log(listData);
+        console.log(listData);
 
         if (ctx.isAuthenticated()) {
             await this.ctx.render('applist', {
@@ -50,7 +51,9 @@ class ApplistController extends Controller {
         // console.log(params)
         const newProject = await ctx.service.project.createProject({
             projectName: params.projectName,
-            describe: params.describe
+            describe: params.describe,
+            yxAppKey: params.yxAppKey,
+            yxAppSecret: params.yxAppSecret
         })
         //如果插入成功
         if (newProject) {

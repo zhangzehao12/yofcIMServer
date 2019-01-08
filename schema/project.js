@@ -11,6 +11,10 @@ module.exports = app => {
         },
         projectName: STRING(50),
         describe: STRING,
+        //网易云信appKey
+        yxAppKey: STRING(50),
+        //网易云信appSecret
+        yxAppSecret: STRING(50),
         created_at: {
             allowNull: false,
             type: DATE,
