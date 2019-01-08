@@ -48,3 +48,8 @@ footer{
     height:22rem;
     margin:0 0.5rem 1rem 0.5rem;
 }
+
+/*单个应用管理页面，项目下会员列表*/
+.member-list-wrap{
+    padding:50px;
+}

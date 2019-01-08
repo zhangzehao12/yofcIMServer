@@ -25,6 +25,8 @@ module.exports = app => {
   // 新建一个应用
   router.post('/api/create_app', controller.applist.create);
 
+  // 每个应用的单独管理页面
+  router.get('/applist/:projectId', controller.appDetail.index);
   //生成第三方js
   router.get('/api/get_script', controller.generateScript.index)
 
