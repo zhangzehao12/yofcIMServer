@@ -27,6 +27,10 @@ module.exports = app => {
 
   // 每个应用的单独管理页面
   router.get('/applist/:projectId', controller.appDetail.index);
+
+  // 获取指定id应用下面所有的用户信息列表
+  router.get('/applist/:projectId/memberlist', controller.appDetail.getMemberlist);
+
   //生成第三方js
   router.get('/api/get_script', controller.generateScript.index)
 

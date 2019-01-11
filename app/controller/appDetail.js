@@ -13,6 +13,13 @@ class AppDetailController extends Controller {
         });
     }
 
+    async getMemberlist() {
+        const ctx = this.ctx;
+        const projectId = ctx.params.projectId;
+
+        // ctx.body = '213'
+    }
+
 }
 
 module.exports = AppDetailController;
