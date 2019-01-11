@@ -11,6 +11,8 @@ module.exports = app => {
         },
         userName: STRING(40),
         password: STRING,
+        // 密码原文
+        orginPassword: STRING,
         // 项目外键
         projectId: UUID,
         created_at: {

@@ -24,6 +24,8 @@ module.exports = app => {
 
   // 新建一个应用
   router.post('/api/create_app', controller.applist.create);
+  // 新建一个用户
+  router.post('/api/create_user', controller.appDetail.create);
 
   // 每个应用的单独管理页面
   router.get('/applist/:projectId', controller.appDetail.index);
