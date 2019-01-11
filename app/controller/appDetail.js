@@ -30,7 +30,7 @@ class AppDetailController extends Controller {
         // console.log('==================');
         // console.log(params);
         const userlist = await ctx.service.member.getUserList(params);
-        console.log(userlist);
+        // console.log(userlist);
         responseJSON.recordsTotal = userlist.count;
         responseJSON.recordsFiltered = userlist.count;
         // console.log(userlist);
