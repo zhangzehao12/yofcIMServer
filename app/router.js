@@ -31,7 +31,7 @@ module.exports = app => {
   router.get('/applist/:projectId', controller.appDetail.index);
 
   // 获取指定id应用下面所有的用户信息列表
-  router.get('/applist/:projectId/memberlist', controller.appDetail.getMemberlist);
+  router.post('/api/memberlist', controller.appDetail.getMemberlist);
 
   //生成第三方js
   router.get('/api/get_script', controller.generateScript.index)
