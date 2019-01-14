@@ -63,10 +63,19 @@ class MemberService extends Service {
             {
                 url: 'https://api.netease.im/nimserver/user/create.action',
                 method: 'post',
-                data: JSON.stringify({
-                    accid: params.userId,
+                data: {
+                    accid: params.userId.replace(/-/g, ''),
                     name: params.userName
-                }),
+                },
+                transformRequest: [
+                    function (data) {
+                        let ret = '';
+                        for (let it in data) {
+                            ret += encodeURIComponent(it) + '=' + encodeURIComponent(data[it]) + '&';
+                        }
+                        return ret;
+                    }
+                ],
                 headers: {
                     'AppKey': AppKey,
                     'Nonce': Nonce,
