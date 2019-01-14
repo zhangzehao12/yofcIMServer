@@ -38,6 +38,8 @@ class AppDetailController extends Controller {
             const userlistArr = userlist.rows;
             for (let i = 0; i < userlistArr.length; i++) {
                 let temp = [userlistArr[i].userId,
+                userlistArr[i].yxAccid,
+                userlistArr[i].yxToken,
                 userlistArr[i].userName,
                 userlistArr[i].orginPassword,
                 userlistArr[i].project.projectName,

@@ -21,9 +21,25 @@ class MemberService extends Service {
             userId: result.userId,
             userName: result.userName
         });
-        console.log('=====================')
-        console.log(yunXinRes);
-
+        // 云信注册ID成功返回之后，插入accid,token字段到user表中
+        if (yunXinRes.data.code === 200) {
+            var updateRes = await this.app.model.User.Member.update({
+                yxAccid: yunXinRes.data.info.accid,
+                yxToken: yunXinRes.data.info.token
+            },
+                {
+                    where: {
+                        userId: result.userId
+                    },
+                    fields: ['yxAccid', 'yxToken']
+                });
+        }
+        // console.log('=====================')
+        // console.log(yunXinRes);
+        // console.log('=====================')
+        // console.log(result);
+        // console.log('=====================');
+        // console.log(updateRes);
         return result;
     }
 
@@ -34,7 +50,7 @@ class MemberService extends Service {
         const Project = require('../model/project.js')(this.app);
 
         return await this.app.model.User.Member.findAndCountAll({
-            attributes: ['userId', 'userName', 'orginPassword', 'created_at'],
+            attributes: ['userId', 'yxAccid', 'yxToken', 'userName', 'orginPassword', 'created_at'],
             where: {
                 projectId: params.projectId
             },

@@ -15,6 +15,10 @@ module.exports = app => {
         orginPassword: STRING,
         // 项目外键
         projectId: UUID,
+        // 网易云信accid
+        yxAccid: STRING(32),
+        // 网易云信token
+        yxToken: STRING(128),
         created_at: {
             allowNull: false,
             type: DATE,
