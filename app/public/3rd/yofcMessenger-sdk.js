@@ -31,8 +31,10 @@
                     "nimWebNetCall": "sdk/NIM_Web_Netcall_Module_v5.6.0",
                     "nimWebSDK": "sdk/NIM_Web_SDK_Module_v5.6.0",
                     "speedContactFn": "ui-components/speedContactPlane",
+                    //这里用的jquery同发布者环境用的jquery是独立的，比如发布者环境的window.jquery的版本是3.3.1,而这里是2.2.4
+                    "jquery": "sdk/jquery_v2.2.4_Module",
                     //模板引擎
-                    "ejs":"sdk/ejs_v2.5.8_Module"
+                    "ejs": "sdk/ejs_v2.5.8_Module"
                 },
                 // Sea.js 的基础路径
                 base: 'http://localhost:7001/public/3rd/',
