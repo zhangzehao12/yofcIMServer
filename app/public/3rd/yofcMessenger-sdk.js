@@ -4,6 +4,7 @@
         return;
     }
 
+    //加载js脚本
     function loadScript(url, cb) {
         var script = document.createElement('script');
         script.async = true,
@@ -40,7 +41,7 @@
                 base: 'http://localhost:7001/public/3rd/',
             });
 
-            seajs.use(['nimWebNetCall', 'nimWebSDK', 'speedContactFn'], function (nimWebNetCall, nimWebSDK, speedContactFn) {
+            seajs.use(['nimWebNetCall', 'nimWebSDK', 'speedContactFn', 'theme/default/css/main.css'], function (nimWebNetCall, nimWebSDK, speedContactFn) {
                 if (cb && typeof cb === 'function') {
                     cb();
                 }

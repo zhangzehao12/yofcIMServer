@@ -1,0 +1,315 @@
+.yofcMsgr {}
+
+.yofcMsgrDock {
+    position: fixed;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+}
+
+.yofcMsgrDock .speedContactContainer {
+    position: absolute;
+    bottom: 0;
+    width: 320px;
+    right: 100px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.yofcMsgrDock .uiToggle {}
+
+.yofcMsgrDock .uiToggle .speedContactButton {
+    padding: 12px;
+    display: inline-block;
+}
+
+.yofcMsgrDock .uiToggle .speedContactButton span {
+    font-size: 14px;
+    color: #222;
+}
+
+.yofcMsgrDock .uiToggle .rFloat {
+    float: right;
+}
+
+
+/*整合fontawesome部分icon*/
+
+.yofcMsgr .fa,
+.yofcMsgr .fab,
+.yofcMsgr .fal,
+.yofcMsgr .far,
+.yofcMsgr .fas {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1
+}
+
+.yofcMsgr .fa-lg {
+    font-size: 1.33333em;
+    line-height: .75em;
+    vertical-align: -.0667em
+}
+
+.yofcMsgr .fa-xs {
+    font-size: .75em
+}
+
+.yofcMsgr .fa-sm {
+    font-size: .875em
+}
+
+.yofcMsgr .fa-1x {
+    font-size: 1em
+}
+
+.yofcMsgr .fa-2x {
+    font-size: 2em
+}
+
+.yofcMsgr .fa-3x {
+    font-size: 3em
+}
+
+.yofcMsgr .fa-4x {
+    font-size: 4em
+}
+
+.yofcMsgr .fa-5x {
+    font-size: 5em
+}
+
+.yofcMsgr .fa-6x {
+    font-size: 6em
+}
+
+.yofcMsgr .fa-7x {
+    font-size: 7em
+}
+
+.yofcMsgr .fa-8x {
+    font-size: 8em
+}
+
+.yofcMsgr .fa-9x {
+    font-size: 9em
+}
+
+.yofcMsgr .fa-10x {
+    font-size: 10em
+}
+
+.yofcMsgr .fa-fw {
+    text-align: center;
+    width: 1.25em
+}
+
+.yofcMsgr .fa-ul {
+    list-style-type: none;
+    margin-left: 2.5em;
+    padding-left: 0
+}
+
+.yofcMsgr .fa-ul>li {
+    position: relative
+}
+
+.yofcMsgr .fa-li {
+    left: -2em;
+    position: absolute;
+    text-align: center;
+    width: 2em;
+    line-height: inherit
+}
+
+.yofcMsgr .fa-border {
+    border: .08em solid #eee;
+    border-radius: .1em;
+    padding: .2em .25em .15em
+}
+
+.yofcMsgr .fa-pull-left {
+    float: left
+}
+
+.yofcMsgr .fa-pull-right {
+    float: right
+}
+
+.yofcMsgr .fa.fa-pull-left,
+.yofcMsgr .fab.fa-pull-left,
+.yofcMsgr .fal.fa-pull-left,
+.yofcMsgr .far.fa-pull-left,
+.yofcMsgr .fas.fa-pull-left {
+    margin-right: .3em
+}
+
+.yofcMsgr .fa.fa-pull-right,
+.yofcMsgr .fab.fa-pull-right,
+.yofcMsgr .fal.fa-pull-right,
+.yofcMsgr .far.fa-pull-right,
+.yofcMsgr .fas.fa-pull-right {
+    margin-left: .3em
+}
+
+.yofcMsgr .fa-spin {
+    animation: yofc-msgr-fa-spin 2s infinite linear
+}
+
+.yofcMsgr .fa-pulse {
+    animation: yofc-msgr-fa-spin 1s infinite steps(8)
+}
+
+@keyframes yofc-msgr-fa-spin {
+    0% {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+.yofcMsgr .fa-rotate-90 {
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+    transform: rotate(90deg)
+}
+
+.yofcMsgr .fa-rotate-180 {
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+    transform: rotate(180deg)
+}
+
+.yofcMsgr .fa-rotate-270 {
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+    transform: rotate(270deg)
+}
+
+.yofcMsgr .fa-flip-horizontal {
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+    transform: scaleX(-1)
+}
+
+.yofcMsgr .fa-flip-vertical {
+    transform: scaleY(-1)
+}
+
+.yofcMsgr .fa-flip-horizontal.fa-flip-vertical,
+.yofcMsgr .fa-flip-vertical {
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)"
+}
+
+.yofcMsgr .fa-flip-horizontal.fa-flip-vertical {
+    transform: scale(-1)
+}
+
+:root .yofcMsgr .fa-flip-horizontal,
+:root .yofcMsgr .fa-flip-vertical,
+:root .yofcMsgr .fa-rotate-90,
+:root .yofcMsgr .fa-rotate-180,
+:root .yofcMsgr .fa-rotate-270 {
+    filter: none
+}
+
+.yofcMsgr .fa-stack {
+    display: inline-block;
+    height: 2em;
+    line-height: 2em;
+    position: relative;
+    vertical-align: middle;
+    width: 2.5em
+}
+
+.yofcMsgr .fa-stack-1x,
+.yofcMsgr .fa-stack-2x {
+    left: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%
+}
+
+.yofcMsgr .fa-stack-1x {
+    line-height: inherit
+}
+
+.yofcMsgr .fa-stack-2x {
+    font-size: 2em
+}
+
+.yofcMsgr .fa-inverse {
+    color: #fff
+}
+
+
+/*icon list*/
+
+.yofcMsgr .fa-youtube:before {
+    content: "\f167"
+}
+
+.yofcMsgr .sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px
+}
+
+.yofcMsgr .sr-only-focusable:active,
+.yofcMsgr .sr-only-focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto
+}
+
+@font-face {
+    font-family: "Font Awesome 5 Brands";
+    font-style: normal;
+    font-weight: normal;
+    src: url(../webfonts/fa-brands-400.eot);
+    src: url(../webfonts/fa-brands-400.eot?#iefix) format("embedded-opentype"), url(../webfonts/fa-brands-400.woff2) format("woff2"), url(../webfonts/fa-brands-400.woff) format("woff"), url(../webfonts/fa-brands-400.ttf) format("truetype"), url(../webfonts/fa-brands-400.svg#fontawesome) format("svg")
+}
+
+.yofcMsgr .fab {
+    font-family: "Font Awesome 5 Brands"
+}
+
+@font-face {
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-weight: 400;
+    src: url(../webfonts/fa-regular-400.eot);
+    src: url(../webfonts/fa-regular-400.eot?#iefix) format("embedded-opentype"), url(../webfonts/fa-regular-400.woff2) format("woff2"), url(../webfonts/fa-regular-400.woff) format("woff"), url(../webfonts/fa-regular-400.ttf) format("truetype"), url(../webfonts/fa-regular-400.svg#fontawesome) format("svg")
+}
+
+.yofcMsgr .far {
+    font-weight: 400
+}
+
+@font-face {
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-weight: 900;
+    src: url(../webfonts/fa-solid-900.eot);
+    src: url(../webfonts/fa-solid-900.eot?#iefix) format("embedded-opentype"), url(../webfonts/fa-solid-900.woff2) format("woff2"), url(../webfonts/fa-solid-900.woff) format("woff"), url(../webfonts/fa-solid-900.ttf) format("truetype"), url(../webfonts/fa-solid-900.svg#fontawesome) format("svg")
+}
+
+.yofcMsgr .fa,
+.yofcMsgr .far,
+.yofcMsgr .fas {
+    font-family: "Font Awesome 5 Free"
+}
+
+.yofcMsgr .fa,
+.yofcMsgr .fas {
+    font-weight: 900
+}
