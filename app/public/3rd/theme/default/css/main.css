@@ -1,38 +1,3 @@
-.yofcMsgr {}
-
-.yofcMsgrDock {
-    position: fixed;
-    bottom: 0;
-    height: 0;
-    width: 100%;
-}
-
-.yofcMsgrDock .speedContactContainer {
-    position: absolute;
-    bottom: 0;
-    width: 320px;
-    right: 100px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-}
-
-.yofcMsgrDock .uiToggle {}
-
-.yofcMsgrDock .uiToggle .speedContactButton {
-    padding: 12px;
-    display: inline-block;
-}
-
-.yofcMsgrDock .uiToggle .speedContactButton span {
-    font-size: 14px;
-    color: #222;
-}
-
-.yofcMsgrDock .uiToggle .rFloat {
-    float: right;
-}
-
-
 /*整合fontawesome部分icon*/
 
 .yofcMsgr .fa,
@@ -246,8 +211,25 @@
 
 /*icon list*/
 
-.yofcMsgr .fa-youtube:before {
-    content: "\f167"
+
+/*编辑*/
+
+.yofcMsgr .fa-edit:before {
+    content: "\f044"
+}
+
+
+/*新建群组*/
+
+.yofcMsgr .fa-user-friends:before {
+    content: "\f500"
+}
+
+
+/*设置*/
+
+.yofcMsgr .fa-cog:before {
+    content: "\f013"
 }
 
 .yofcMsgr .sr-only {
@@ -312,4 +294,54 @@
 .yofcMsgr .fa,
 .yofcMsgr .fas {
     font-weight: 900
+}
+
+
+/*widgets style*/
+
+.yofcMsgr {}
+
+.yofcMsgrDock {
+    position: fixed;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+}
+
+.yofcMsgrDock .speedContactContainer {
+    position: absolute;
+    bottom: 0;
+    width: 320px;
+    right: 100px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.yofcMsgrDock .uiToggle {}
+
+.yofcMsgrDock .uiToggle .speedContactButton {
+    padding: 12px;
+    display: inline-block;
+    width: 100%;
+}
+
+.yofcMsgrDock .uiToggle .speedContactButton .barTitle {
+    font-size: 14px;
+    color: #222;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.yofcMsgrDock .uiToggle .speedContactButton .iconBtn {
+    font-size: 14px;
+    color: #666;
+    display: inline-block;
+}
+
+.yofcMsgrDock .uiToggle .speedContactButton .iconBtn i {
+    padding: 0 5px;
+}
+
+.yofcMsgrDock .uiToggle .rFloat {
+    float: right;
 }

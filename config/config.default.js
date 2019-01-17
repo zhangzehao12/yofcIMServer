@@ -1,44 +1,51 @@
 'use strict';
 
 module.exports = appInfo => {
-  const config = exports = {};
+    const config = exports = {};
 
-  // use for cookie sign key, should change to your own and keep security
-  config.keys = appInfo.name + '_1545897509620_1487';
+    // use for cookie sign key, should change to your own and keep security
+    config.keys = appInfo.name + '_1545897509620_1487';
 
-  // add your config here
-  config.middleware = ['csrfAuth'];
+    // add your config here
+    config.middleware = ['csrfAuth'];
 
-  // 配置模板引擎
-  config.view = {
-    mapping: {
-      '.html': 'ejs',
+    // 配置模板引擎
+    config.view = {
+        mapping: {
+            '.html': 'ejs',
+        }
     }
-  }
 
-  // 配置本地数据库
-  config.sequelize = {
-    dialect: 'mysql',
-    database: 'yofcIM_development',
-    host: 'localhost',
-    port: '3306',
-    username: 'root',
-    password: '',
-  }
+    // 配置本地数据库
+    config.sequelize = {
+        dialect: 'mysql',
+        database: 'yofcIM_development',
+        host: 'localhost',
+        port: '3306',
+        username: 'root',
+        password: '',
+    }
 
-  config.passportLocal = {
-    usernameField: 'username',
-    passwordField: 'password'
-  }
+    config.passportLocal = {
+        usernameField: 'username',
+        passwordField: 'password'
+    }
 
-  // 配置session
-  config.session = {
-    key: 'YOFC_IM_SESSION_ID',
-    httpOnly: true,
-    encrypt: true,
-    // 如果设置renew为true,每次刷新页面的时候 session都会被延期
-    // renew: true
-  }
+    // 配置session
+    config.session = {
+        key: 'YOFC_IM_SESSION_ID',
+        httpOnly: true,
+        encrypt: true,
+        // 如果设置renew为true,每次刷新页面的时候 session都会被延期
+        // renew: true
+    }
 
-  return config;
+    config.cors = {
+        // {string|Function} origin: '*',
+        origin: '*',
+        allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH',
+        // {string|Array} allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
+    };
+
+    return config;
 };

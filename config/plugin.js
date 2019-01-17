@@ -28,3 +28,8 @@ exports.jwt = {
     package: 'egg-passport-local',
 }
 
+// 跨域配置
+exports.cors = {
+    enable: true,
+    package: 'egg-cors',
+}
